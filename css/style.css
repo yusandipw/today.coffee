@@ -1,0 +1,428 @@
+:root {
+    --bg: #FFFFFF;
+    --primary: #68502c;
+    --secondColor: #010101; 
+}
+
+* {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: rgb(241, 241, 241);
+    color: var(--secondColor);
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 10%;
+    background-color: rgba(184, 181, 178, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .nav-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-style: italic;
+}
+
+.navbar .nav-logo span {
+    color: var(--secondColor);
+}
+
+.navbar .navbar-nav a {
+    color: var(--secondColor);
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--secondColor);
+}
+
+.navbar .navbar-nav a::after {
+   content: '';
+   display: block;
+   padding-bottom: 0.2rem;
+   border-bottom: 2px solid var(--secondColor);
+   transform: scaleX(0);
+   transition: 0.1s linear; 
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-plus a {
+    color: var(--secondColor);
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-plus a:hover {
+    color: var(--primary);
+}
+
+#menu {
+    display: none;
+}
+
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../css/cafe3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(241, 241, 241, 1) 15%, rgba(241, 241, 241, 0) 50%);
+}
+
+.hero .content {
+    margin-top: 0.1rem;
+    padding: 1.5rem 10%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 3em;
+    color: var(--secondColor);
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
+    line-height: 1.2;
+}
+
+.hero .content .hero-logo {
+    color: var(--secondColor);
+    font-size: 3em;
+    font-style: italic;
+}
+
+.hero .content .hero-logo span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.hero .content p {
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.hero .content .buy {
+    margin-top: 1rem ;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 3px rgba(255, 255, 255, 0.5);
+}
+
+    /* about */
+
+.about, .menu-kami, .contact {
+    padding: 8rem 7% 1.5rem;
+}
+
+.about h2, .menu-kami h2, .contact h2 {
+    color: var(--secondColor);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span, .menu-kami span, .contact span {
+    color: var(--primary);
+}
+
+.about .row {
+     display: flex;
+}
+
+.about .row .about-img {
+    flex:1 1 45rem ;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    padding: 0 3rem;
+}
+    
+.about .row .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    color: #010101; 
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+    /* menu kami */
+
+
+.menu-kami h2, .contact h2 {
+    margin-bottom: 1rem;
+}
+
+.menu-kami p, .contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 400;
+    line-height: 1.6;
+}    
+
+.menu-kami .row {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+
+}
+
+.menu-kami .row .menu-card { 
+    text-align: center;
+    padding-bottom: 3rem;
+} 
+
+.menu-kami .row .menu-card img {
+    border-radius: 50%;
+    width: 70%;
+}
+
+.menu-kami .row .menu-card .menu-card-tittle {
+    margin: 1rem auto 0.5rem;
+}
+
+    /* contact */
+
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: var(--bg);
+}
+
+.contact .row .maps {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form .input-grup {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #000000ee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-grup input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    background: none;
+}
+
+.contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: var(--bg);
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+footer .social {
+    padding: 1rem 0;
+}
+
+footer .social a {
+    color: var(--bg);
+    margin: 1rem;
+}
+
+footer .social a:hover,
+footer .link a:hover {
+    color: var(--secondColor);
+}
+
+footer .link {
+    margin-bottom: 1rem;
+}
+
+footer .link a {
+    color: var(--bg);
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    color: var(--bg);
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--secondColor);
+    font-weight: 700;
+}
+    /* media query */
+
+    /* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+    /* tablet */
+
+@media (max-width: 790px) {
+    html {
+        font-size: 70%;
+    }
+    #menu {
+        background-color: rgba(184, 181, 178, 0.6);
+        display: inline;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(184, 181, 178, 0.6);
+        width: 17rem;
+        height: 17rem;
+        transition: 0.2s;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+    } 
+
+    .navbar .navbar-nav a {
+        color: var(--secondColor);
+        background-color: rgba(184, 181, 178, 0.6);
+        display: block;
+        margin: 0%;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+    flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.4rem;
+    }
+
+    .menu-kami p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    
+    .menu-kami .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .maps {
+        height: 25rem;
+    }
+
+    .contact .row form {
+        padding: 0;
+    }
+}
+
+
+
+/* handphone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+
